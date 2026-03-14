@@ -8,7 +8,7 @@
     {
       legacyPackages.tizen-sdk.distribution =
         let
-          index = lib.importJSON ./data/index.json;
+          index = lib.importJSON ../data/index.json;
         in
         lib.mapAttrs (
           distribution_name: distribution:
@@ -17,7 +17,7 @@
             value = lib.mapAttrs (
               os: object_path:
               let
-                packages = lib.importJSON ./${object_path};
+                packages = lib.importJSON ../${object_path};
               in
               lib.listToAttrs (
                 map (

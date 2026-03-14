@@ -13,7 +13,11 @@ It can be used for supplying Tizen-based Rootstraps and some small, individual
 components, for example SDB, but **cannot be used to run full Tizen SDK
 and/or Tizen Studio yet**.
 
-Properly wrapped packages for some of the components might be coming soon.
+More properly wrapped packages for some of the components might be coming soon.
+
+## Wrapped packages
+
+- `sdb`: Smart Development Bridge
 
 ## Usage
 

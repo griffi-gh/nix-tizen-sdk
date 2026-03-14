@@ -13,7 +13,8 @@
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = import systems;
       imports = [
-        ./distribution.nix
+        ./nix/distribution.nix
+        ./nix/packages.nix
       ];
     };
 }
