@@ -13,7 +13,7 @@
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = import systems;
       perSystem =
-        { pkgs, system, ... }:
+        { pkgs, ... }:
         let
           inherit (pkgs) lib;
         in
@@ -41,9 +41,9 @@
                         name = pname;
                         value =
                           let
-                            inherit (pkgs) stdenv fetchurl unzip;
+                            inherit (pkgs) stdenvNoCC fetchurl unzip;
                           in
-                          stdenv.mkDerivation {
+                          stdenvNoCC.mkDerivation {
                             inherit pname;
                             inherit (package) version;
                             src = fetchurl {
