@@ -7,22 +7,27 @@ This implementation is work-in-progress and currently doesnt implement anything
 except automatically generated `fetchurl`-based package fetchers for packages
 from <https://download.tizen.org/sdk/tizenstudio/> distributions.
 
-It can still be useful for e.g. supplying Tizen-based Rootstraps/rootfs and maybe
-small individual components, like sdb but cannot be used to run full Tizen SDK
-and/or Tizen Studio
+It can be used for supplying Tizen-based Rootstraps and some small, individual
+components, for example SDB, but **cannot be used to run full Tizen SDK
+and/or Tizen Studio yet**.
+
+Properly wrapped packages for some of the components might be coming soon.
 
 ## Usage
 
-This flake provides all packages available in snapshots found on <https://download.tizen.org/sdk/tizenstudio/official/snapshots/>
+This flake provides all packages available in snapshots found on
+<https://download.tizen.org/sdk/tizenstudio/official/snapshots/>
 
 For example, to fetch the Ubuntu 64-bit version of the
-`wearable-2_3-emulator-qemu-skins` package from `Tizen_Studio_5_6` snapshot:
+`wearable-2.3-emulator-qemu-skins` package from `Tizen_Studio_5.6` snapshot
+(using the `official` distribution):
 
 ```bash
 nix build .#tizen-sdk.distribution.official.Tizen_Studio_5_6.ubuntu-64.wearable-2_3-emulator-qemu-skins
 ```
 
-(Please note that all of the packages in this flake are marked as
+(Dots are replaced with underscores in the package/snapshot names;
+Also, pease note that all of the packages in this flake are marked as
 `unfree`/`unfreeRedistributable`, so you may need to enable `allowUnfree` in your
 Nix configuration and/or `allowRedistributable`)
 
