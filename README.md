@@ -19,10 +19,14 @@ More properly wrapped packages for some of the components might be coming soon.
 
 - `sdb`: Smart Development Bridge
 
-## Usage
+(most packages you'd need are probably not wrapped yet, scroll down a bit lower
+to see how to use distribution packages from `legacyPackages.tizen-sdk.distribution.*`)
+
+## Auto-generated packages
 
 This flake provides all packages available in snapshots found on
 <https://download.tizen.org/sdk/tizenstudio/official/snapshots/>
+as auto-generated Nix derivations.
 
 This is supposed to be used in conjunction with `pkgs.symlinkJoin` to create a
 complete Tizen SDK environment needed for your task.
