@@ -1,5 +1,7 @@
 # Tizen SDK for Nix
-
+    
+<img src=".assets/logo.png" alt="Tizen SDK for Nix logo" width="197" height="197" float="right" align="right">
+    
 This is a work-in-progress flake that allows fetching and using *some* Tizen SDK
 components using Nix.
 
