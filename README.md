@@ -20,7 +20,14 @@ Properly wrapped packages for some of the components might be coming soon.
 This flake provides all packages available in snapshots found on
 <https://download.tizen.org/sdk/tizenstudio/official/snapshots/>
 
-For example, to fetch the Ubuntu 64-bit version of the
+This is supposed to be used in conjunction with `pkgs.symlinkJoin` to create a
+complete Tizen SDK environment needed for your task.
+
+The naming convention of auto-generated dist packages is as follows:
+
+`tizen-sdk.distribution.<distribution>.<snapshot>.<os>.<package>`
+
+For example, to build the Ubuntu 64-bit version of the
 `wearable-2.3-emulator-qemu-skins` package from `Tizen_Studio_5.6` snapshot
 (using the `official` distribution):
 
@@ -31,7 +38,7 @@ nix build .#tizen-sdk.distribution.official.Tizen_Studio_5_6.ubuntu-64.wearable-
 (Dots are replaced with underscores in the package/snapshot names;
 Also, pease note that all of the packages in this flake are marked as
 `unfree`/`unfreeRedistributable`, so you may need to enable `allowUnfree` in your
-Nix configuration and/or `allowRedistributable`)
+Nix configuration)
 
 ## Updating
 
@@ -39,3 +46,5 @@ To update the index, run the provided `generate_index.nu` script
 at the root of this repository.
 
 You shouldn't need anything except Nushell to run it.
+
+🏳️‍⚧️
