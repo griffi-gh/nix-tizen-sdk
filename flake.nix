@@ -44,6 +44,7 @@
                             inherit (pkgs) stdenvNoCC fetchurl unzip;
                           in
                           stdenvNoCC.mkDerivation {
+                            # TODO: respect dependencies
                             inherit pname;
                             inherit (package) version;
                             src = fetchurl {
@@ -57,6 +58,12 @@
                             installPhase = ''
                               mv data $out
                             '';
+                            meta = {
+                              inherit (package) description; # (prob should be longDescription)
+                              license = lib.licenses.unfree;
+                              sourceProvenance = with lib.sourceTypes; [ binaryNativeCode ];
+                              homepage = "https://developer.tizen.org/development/tizen-studio/download/";
+                            };
                           };
                       }
                     ) packages
