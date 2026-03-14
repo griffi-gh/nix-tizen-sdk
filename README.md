@@ -17,32 +17,35 @@ More properly wrapped packages for some of the components might be coming soon.
 
 ## Wrapped packages
 
-- `sdb`: Smart Development Bridge
+- `tizen-sdk10` - Tizen SDK 10.0
+  - `tizen-sdk10.makeTizenSdk`: Builds final Tizen SDK path from individual components
+  - `tizen-sdk10.sdb`: Smart Development Bridge (usable w/o makeTizenSdk)
+- `sdb` (alias of `tizen-sdk10.sdb`)
 
 (most packages you'd need are probably not wrapped yet, scroll down a bit lower
-to see how to use distribution packages from `legacyPackages.tizen-sdk.distribution.*`)
+to see how to use distribution packages from `legacyPackages.tizen-sdk-distribution.*`)
 
 ## Auto-generated packages
 
 This flake provides all packages available in snapshots found on
-<https://download.tizen.org/sdk/tizenstudio/official/snapshots/> (as well as 
+<https://download.tizen.org/sdk/tizenstudio/official/snapshots/> (as well as
 [tizen_studio_source](https://download.tizen.org/sdk/tizenstudio/tizen_studio_source/snapshots/))
 as auto-generated Nix derivations.
 
-This is supposed to be used in conjunction with `pkgs.symlinkJoin` to create a
-complete Tizen SDK environment needed for your task.\
-(TODO: generate the `sdk.info` file required by most Tizen Studio components)
+This is supposed to be used in conjunction with `tizen-*.makeTizenSdk` helpers
+to create a complete Tizen SDK environment needed for your task.\
+(TODO: explain usage of makeTizenSdk, combining dist packages with wrapped ones, deps etc.)
 
 The naming convention of auto-generated dist packages is as follows:
 
-`tizen-sdk.distribution.<distribution>.<snapshot>.<os>.<package>`
+`tizen-sdk-distribution.<distribution>.<snapshot>.<os>.<package>`
 
 For example, to build the Ubuntu 64-bit version of the
 `wearable-2.3-emulator-qemu-skins` package from `Tizen_Studio_5.6` snapshot
 (using the `official` distribution):
 
 ```bash
-nix build .#tizen-sdk.distribution.official.Tizen_Studio_5_6.ubuntu-64.wearable-2_3-emulator-qemu-skins
+nix build .#tizen-sdk-distribution.official.Tizen_Studio_5_6.ubuntu-64.wearable-2_3-emulator-qemu-skins
 ```
 
 (Dots are replaced with underscores in the package/snapshot names;

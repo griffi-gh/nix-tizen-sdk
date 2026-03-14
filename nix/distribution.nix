@@ -6,7 +6,7 @@
       inherit (pkgs) lib;
     in
     {
-      legacyPackages.tizen-sdk.distribution =
+      legacyPackages.tizen-sdk-distribution =
         let
           index = lib.importJSON ../data/index.json;
         in

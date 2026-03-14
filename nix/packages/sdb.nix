@@ -4,9 +4,10 @@
   autoPatchelfHook,
   installShellFiles,
   tizen-sdk,
+  tizen-sdk-version,
 }:
 let
-  inherit (tizen-sdk.distribution.official.Tizen_SDK_10_0.ubuntu-64) sdb;
+  inherit (tizen-sdk.ubuntu-64) sdb;
 in
 stdenv.mkDerivation {
   pname = "sdb";
