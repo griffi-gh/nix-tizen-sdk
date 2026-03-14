@@ -23,13 +23,13 @@ stdenv.mkDerivation {
   ];
 
   installPhase = "
-    install -Dm755 $src/tools/sdb $out/bin/sdb
-    installShellCompletion --bash --name sdb.bash $src/tools/.sdb-completion.bash
+    mkdir -p $out/opt/tizen-studio
+    cp -r $src/opt/tizen-studio/* $out/opt/tizen-studio
 
-    # keep tools/ directory structure for tizen sdk compatibility
-    mkdir -p $out/tools
-    ln -s $out/bin/sdb $out/tools/sdb
-    ln -s $out/share/bash-completion/completions/sdb.bash $out/tools/.sdb-completion.bash
+    # install shell completion, link sdb to bin/
+    installShellCompletion --bash --name sdb.bash $src/opt/tizen-studio/tools/.sdb-completion.bash
+    mkdir -p $out/bin
+    ln -s $out/opt/tizen-studio/tools/sdb $out/bin/sdb
   ";
 
   meta = {

@@ -44,7 +44,8 @@
                           unzip $src
                         '';
                         installPhase = ''
-                          mv data $out
+                          mkdir -p $out/opt/tizen-studio
+                          mv data/* $out/opt/tizen-studio/
                         '';
                         meta = {
                           inherit (package) description; # (prob should be longDescription)

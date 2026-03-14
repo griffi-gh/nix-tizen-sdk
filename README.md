@@ -29,7 +29,8 @@ This flake provides all packages available in snapshots found on
 as auto-generated Nix derivations.
 
 This is supposed to be used in conjunction with `pkgs.symlinkJoin` to create a
-complete Tizen SDK environment needed for your task.
+complete Tizen SDK environment needed for your task.\
+(TODO: generate the `sdk.info` file required by most Tizen Studio components)
 
 The naming convention of auto-generated dist packages is as follows:
 
