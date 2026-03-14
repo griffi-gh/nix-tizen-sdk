@@ -49,6 +49,8 @@ Also, pease note that all of the packages in this flake are marked as
 `unfree`/`unfreeRedistributable`, so you may need to enable `allowUnfree` in your
 Nix configuration)
 
+The SDK root is at `/opt/tizen-studio` inside the package's output to avoid conflicts.
+
 ## Updating
 
 To update the index, run the provided `generate_index.nu` script
