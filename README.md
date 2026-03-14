@@ -25,7 +25,8 @@ to see how to use distribution packages from `legacyPackages.tizen-sdk.distribut
 ## Auto-generated packages
 
 This flake provides all packages available in snapshots found on
-<https://download.tizen.org/sdk/tizenstudio/official/snapshots/>
+<https://download.tizen.org/sdk/tizenstudio/official/snapshots/> (as well as 
+[tizen_studio_source](https://download.tizen.org/sdk/tizenstudio/tizen_studio_source/snapshots/))
 as auto-generated Nix derivations.
 
 This is supposed to be used in conjunction with `pkgs.symlinkJoin` to create a
