@@ -3,11 +3,11 @@
   stdenv,
   autoPatchelfHook,
   installShellFiles,
-  tizen-sdk,
-  tizen-sdk-version,
+  tizenSdkDistribution,
+  ...
 }:
 let
-  inherit (tizen-sdk.ubuntu-64) sdb;
+  inherit (tizenSdkDistribution.ubuntu-64) sdb;
 in
 stdenv.mkDerivation {
   pname = "sdb";
@@ -32,6 +32,10 @@ stdenv.mkDerivation {
     mkdir -p $out/bin
     ln -s $out/opt/tizen-studio/tools/sdb $out/bin/sdb
   ";
+
+  passthru = sdb.passthru // {
+    unwrapped = sdb;
+  };
 
   meta = {
     description = "Smart Development Bridge for device management";
