@@ -25,6 +25,8 @@ tizen-studio-5_x.mkTizenSdk [
 
 ## Wrapped packages
 
+Currently, we support latest SDK and (deprecated) Tizen Studio 5.x, 6.x.
+
 - `tizen-sdk` (alias of `tizen-sdk-10_x`)
 - `tizen-sdk-10_x` - Tizen SDK 10.x (latest)
   - `mkTizenSdk`: Builds final Tizen SDK path from individual components
