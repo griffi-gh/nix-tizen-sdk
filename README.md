@@ -27,13 +27,13 @@ tizen-studio-5_x.mkTizenSdk [
 
 - `tizen-sdk` (alias of `tizen-sdk-10_x`)
 - `tizen-sdk-10_x` - Tizen SDK 10.x (latest)
-  - `makeTizenSdk`: Builds final Tizen SDK path from individual components
+  - `mkTizenSdk`: Builds final Tizen SDK path from individual components
   - `sdb`: Smart Development Bridge (usable standalone)
 - `tizen-studio-6_x` - Tizen Studio 6.x
-  - `tizen-studio-6_x.makeTizenSdk`: Builds final Tizen Studio path from individual components
+  - `tizen-studio-6_x.mkTizenSdk`: Builds final Tizen Studio path from individual components
   - `tizen-studio-6_x.sdb`: Smart Development Bridge (usable standalone)
 - `tizen-studio-5_x` - Tizen Studio 5.x
-  - `tizen-studio-5_x.makeTizenSdk`: Builds final Tizen Studio path from individual components
+  - `tizen-studio-5_x.mkTizenSdk`: Builds final Tizen Studio path from individual components
   - `tizen-studio-5_x.sdb`: Smart Development Bridge (usable standalone)
 - `tizen-sdk-distribution` - Raw/unwrapped Tizen SDK distribution packages
 
@@ -51,7 +51,7 @@ This flake provides all packages available in snapshots found on
 [tizen_studio_source](https://download.tizen.org/sdk/tizenstudio/tizen_studio_source/snapshots/))
 as auto-generated Nix fetchurl derivations.
 
-In most cases, you should use `makeTizenSdk` to combine distribution packages,
+In most cases, you should use `mkTizenSdk` to combine distribution packages,
 and never touch them directly, as it handles dependencies and wrapping for you.
 
 The naming convention of auto-generated dist packages is as follows:
