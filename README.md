@@ -27,16 +27,17 @@ tizen-studio-5_x.mkTizenSdk [
 
 Currently, we support latest SDK and (deprecated) Tizen Studio 5.x, 6.x.
 
-- `tizen-sdk` (alias of `tizen-sdk-10_x`)
-- `tizen-sdk-10_x` - Tizen SDK 10.x (latest)
-  - `mkTizenSdk`: Builds final Tizen SDK path from individual components
-  - `wrapper`: Wrapped distribution components
-- `tizen-studio-6_x` - Tizen Studio 6.x
-  - `mkTizenSdk`: Builds final Tizen Studio path from individual components
-  - `wrapper`: Wrapped distribution components
+SDKs:
+
+
 - `tizen-studio-5_x` - Tizen Studio 5.x
-  - `mkTizenSdk`: Builds final Tizen Studio path from individual components
-  - `wrapper`: Wrapped distribution components
+- `tizen-studio-6_x` - Tizen Studio 6.x
+- `tizen-sdk-10_x` - Tizen SDK 10.x (latest)
+- `tizen-sdk` (alias of `tizen-sdk-10_x`)
+  - `mkTizenSdk`: Builds final Tizen SDK path from individual components
+  - `wrapper.*`: Wrapped distribution components
+    - `sdb` - Smart Debug Bridge (standalone)
+ 
 - `tizen-sdk-distribution` - Raw/unwrapped Tizen SDK distribution packages
 
 Aliases:
