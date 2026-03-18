@@ -10,7 +10,13 @@ let
   jdk = javaPackages.compiler.openjdk8;
 in
 runCommand "embedded-java-${jdk.version}" {
-  passthru.unwrapped = embedded-java;
+  passthru = embedded-java.passthru // {
+    unwrapped = embedded-java;
+  };
+  meta = {
+    inherit (jdk.meta) platforms license;
+    # inherit (embedded-java) description;
+  };
 } ''
   mkdir -p $out/opt/tizen-studio
   ln -s ${jdk} $out/opt/tizen-studio/jdk
