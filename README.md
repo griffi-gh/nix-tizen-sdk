@@ -37,7 +37,6 @@ SDKs:
   - `mkTizenSdk`: Builds final Tizen SDK path from individual components
   - `wrapper.*`: Wrapped distribution components
     - `sdb` - Smart Debug Bridge (standalone)
- 
 - `tizen-sdk-distribution` - Raw/unwrapped Tizen SDK distribution packages
 
 Aliases:
