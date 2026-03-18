@@ -29,7 +29,6 @@ Currently, we support latest SDK and (deprecated) Tizen Studio 5.x, 6.x.
 
 SDKs:
 
-
 - `tizen-studio-5_x` - Tizen Studio 5.x
 - `tizen-studio-6_x` - Tizen Studio 6.x
 - `tizen-sdk-10_x` - Tizen SDK 10.x (latest)
