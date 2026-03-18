@@ -6,9 +6,10 @@
       dist = self'.legacyPackages.tizen-sdk-distribution.official;
       mkAll = args: {
         mkTizenSdk = pkgs.callPackage ./packages/mkTizenSdk.nix args;
-        sdb = pkgs.callPackage ./packages/wrapper/sdb.nix args;
-        embedded-java = pkgs.callPackage ./packages/wrapper/embedded-java.nix args;
-        # sdk-utils = pkgs.callPackage ./packages/wrapper/sdk-utils.nix args;
+        wrapper = {
+          sdb = pkgs.callPackage ./packages/wrapper/sdb.nix args;
+          embedded-java = pkgs.callPackage ./packages/wrapper/embedded-java.nix args;
+        };
       };
     in
     {
@@ -29,9 +30,9 @@
 
         # Tizen SDK 10.x (latest)
         tizen-sdk-10_x = mkAll {
-          tizenSdkPackages = tizen-sdk-10_x;
-          tizenSdkDistribution = dist.Tizen_SDK_10_0;
           tizenSdkVersion = "10.0";
+          tizenSdkDistribution = dist.Tizen_SDK_10_0;
+          tizenSdkPackages = tizen-sdk-10_x;
         };
 
         # aliases:

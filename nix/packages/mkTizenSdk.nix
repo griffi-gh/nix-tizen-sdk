@@ -19,8 +19,8 @@ let
     }
     .${stdenvNoCC.hostPlatform.system};
 
-  # get from tizenSdkPackages, fallback to distribution packages for current OS
-  getTizenPkgByName = name: tizenSdkPackages.${name} or tizenSdkDistribution.${os}.${name};
+  # get from tizenSdkPackages wrappers, fallback to distribution packages for current OS
+  getTizenPkgByName = name: tizenSdkPackages.wrapper.${name} or tizenSdkDistribution.${os}.${name};
 
   all = builtins.genericClosure {
     startSet = map (pkg: {

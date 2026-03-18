@@ -30,18 +30,18 @@ Currently, we support latest SDK and (deprecated) Tizen Studio 5.x, 6.x.
 - `tizen-sdk` (alias of `tizen-sdk-10_x`)
 - `tizen-sdk-10_x` - Tizen SDK 10.x (latest)
   - `mkTizenSdk`: Builds final Tizen SDK path from individual components
-  - `sdb`: Smart Development Bridge (usable standalone)
+  - `wrapper`: Wrapped distribution components
 - `tizen-studio-6_x` - Tizen Studio 6.x
-  - `tizen-studio-6_x.mkTizenSdk`: Builds final Tizen Studio path from individual components
-  - `tizen-studio-6_x.sdb`: Smart Development Bridge (usable standalone)
+  - `mkTizenSdk`: Builds final Tizen Studio path from individual components
+  - `wrapper`: Wrapped distribution components
 - `tizen-studio-5_x` - Tizen Studio 5.x
-  - `tizen-studio-5_x.mkTizenSdk`: Builds final Tizen Studio path from individual components
-  - `tizen-studio-5_x.sdb`: Smart Development Bridge (usable standalone)
+  - `mkTizenSdk`: Builds final Tizen Studio path from individual components
+  - `wrapper`: Wrapped distribution components
 - `tizen-sdk-distribution` - Raw/unwrapped Tizen SDK distribution packages
 
 Aliases:
 
-- `sdb` (alias of `tizen-sdk.sdb`)
+- `sdb` (alias of `tizen-sdk.wrapper.sdb`)
 
 (most packages you'd need are probably not wrapped yet, scroll down a bit lower
 to see how to use distribution packages from `legacyPackages.tizen-sdk-distribution.*`)
