@@ -54,10 +54,10 @@ symlinkJoin {
     # done
 
     # sdk.info
-    # mkdir -p "$out/opt/tizen-studio-data"
+    mkdir -p "$out/opt/tizen-studio-data"
     cat > "$out/opt/tizen-studio/sdk.info" <<EOF
     TIZEN_SDK_INSTALLED_PATH=$out/opt/tizen-studio
-    TIZEN_SDK_DATA_PATH=/tmp/tizen-studio-data
+    TIZEN_SDK_DATA_PATH=$out/opt/tizen-studio-data
     EOF
 
     # sdk.version
