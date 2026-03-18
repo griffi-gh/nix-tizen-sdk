@@ -33,9 +33,7 @@ stdenv.mkDerivation {
     ln -s $out/opt/tizen-studio/tools/sdb $out/bin/sdb
   ";
 
-  passthru = sdb.passthru // {
-    unwrapped = sdb;
-  };
+  passthru = sdb.passthru // { unwrapped = sdb; };
 
   meta = {
     description = "Smart Development Bridge for device management";
